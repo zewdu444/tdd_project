@@ -1,18 +1,23 @@
 class Solver
-  def factorial(n)
-    raise ArgumentError, "Number must be postitve" if n < 0
-    n == 0 ? 1 : n * factorial(n-1)
+  def factorial(number)
+    raise ArgumentError, 'Number must be postitve' if number.negative?
+
+    number.zero? ? 1 : number * factorial(number - 1)
   end
- 
-  def fizzbuzz(n)
-    if n % 5 == 0 && n % 3 == 0
-      "fizzbuzz"
-    elsif n % 5 == 0
-      "buzz"
-    elsif n % 3 == 0
-      "fizz"
+
+  def reverse(word)
+    word.reverse
+  end
+
+  def fizzbuzz(number)
+    if (number % 5).zero? && (number % 3).zero?
+      'fizzbuzz'
+    elsif (number % 5).zero?
+      'buzz'
+    elsif (number % 3).zero?
+      'fizz'
     else
-      n.to_s
+      number.to_s
     end
   end
 end
