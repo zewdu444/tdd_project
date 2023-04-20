@@ -14,5 +14,8 @@ describe Solver do
   it "should raise argumental  error if a number is negative " do
     expect{ @solver.factorial(-1)}.to raise_error(ArgumentError)
   end
+  it "should return reverse word of 'hello' to be 'olleh'" do
+    expect(@solver.reverse("hello")).to eq("olleh")
+  end
 
 end
