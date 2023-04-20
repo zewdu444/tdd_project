@@ -9,4 +9,20 @@ describe Solver do
     expect(@solver).to be_instance_of(Solver)
   end
 
+  it "should return Fizz When input is divisible by 3"
+    expect(@solver.fizzbuzz(9)).to eq("fizz")
+  end
+
+  it "should return buzz When input is divisible by 5"
+    expect(@solver.fizzbuzz(10)).to eq("buzz")
+  end
+
+  it "should return fizzbuzz When input is divisible by 5 and 3"
+    expect(@solver.fizzbuzz(15)).to eq("fizzbuzz")
+  end
+
+  it "Any other case, return N as a string"
+    expect(@solver.fizzbuzz(7)).to eq("7")
+  end
+
 end
