@@ -5,13 +5,14 @@ class Solver
   end
  
   def fizzbuzz(n)
-    if n % 5 == 0
+    if n % 5 == 0 && n % 3 == 0
+      "fizzbuzz"
+    elsif n % 5 == 0
       "buzz"
     elsif n % 3 == 0
       "fizz"
-    elsif n % 5 == 0 && n % 3 == 0
-      "fizzbuzz"
     else
-      n
+      n.to_s
     end
+  end
 end
